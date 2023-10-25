@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="utf-8">
@@ -68,14 +68,11 @@
                   <li class="dropdown"><a href="">Sair</a></li>
                   senao 
                   
-                  <li class="dropdown"><a href="">Entrar</a></li>
+                  <li class="dropdown"><a href="login.php">Entrar</a></li>
                   
                   <li class="dropdown"><a href="">Cadastrar</a></li>
                 */
               ?>
-              <li class="dropdown"><a href="">Entrar</a></li>
-              <li class="dropdown"><a href="">Cadastrar</a></li>
-
             </ul>
           </li>
         </ul>

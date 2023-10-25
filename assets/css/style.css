@@ -322,7 +322,7 @@ h6 {
 .navbar-mobile a:focus {
   padding: 10px 20px;
   font-size: 15px;
-  color: #666666;
+  color: #666666; 
 }
 
 .navbar-mobile a:hover,
@@ -409,7 +409,18 @@ h6 {
   flex-direction: column;
   text-align: center;
 }
-
+#hero .hero-container .formulario form input{
+  width: 200px;
+}
+#hero .hero-container .formulario{
+  background-color:#fff;
+}
+#hero .hero-container .formulario label{
+  color:#2dc997;
+}
+#hero .hero-container .formulario .submit{
+border-radius: 10px;
+}
 #hero h1 {
   margin: 30px 0 10px 0;
   font-size: 48px;
