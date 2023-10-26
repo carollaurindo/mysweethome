@@ -1,3 +1,20 @@
+<?php 
+if($_GET['status'] == 1){
+  echo "
+  <script type="text/javascript" defer>
+      alert("Categoria criada com sucesso");
+    </script>
+  ";
+}else{
+
+  echo "
+  <script type="text/javascript" defer>
+      alert("Categoria não criada com sucesso");
+    </script>
+  ";
+}
+?>
+
 <html>
 <head>
 <title>Criar categorias</title>
