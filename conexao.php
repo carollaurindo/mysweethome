@@ -20,10 +20,10 @@ function recebeInformacoesUsuario($mysqli,$user,$passwordUser){
     return $arrayInfo;
 }
 
-function excluirInfo($msqyli,$tabela,$valor){
-        $sql = "DELETE FROM $tabela WHERE $valor";
-        if(mysqli_query($mysqli,$sql)){
-        echo "Deletado $valor com sucesso";
-        }
+function inserir($mysqli,$tabelaEColunas,$info){
+
+    $sql = "INSERT INTO " . $tabelaEColunas . "VALUES(" . $info .")";
+
+    mysqli_query($mysqli,$sql);
 }
 ?>
