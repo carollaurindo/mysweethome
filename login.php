@@ -88,7 +88,7 @@
   <section id="hero">
     <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
       <div class="formulario">
-        <form class=".form-control .form-control-lg formulario" action="login_verify.php" method="POST">
+        <form class=".form-control .form-control-lg formulario" action="verify/login_verify.php" method="POST">
         <label>Email</label>      </br>
         <input class=".form-control" type="email" name="email"></br>
         <label>Senha</label></br>

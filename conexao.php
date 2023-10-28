@@ -1,24 +1,33 @@
 <?php
 
-$banco = "";
-$usuario = "";
+$banco = "testetcc";
+$usuario = "root";
 $senha = "";
-$localhost = "";
+$localhost = "localhost";
 
 
 $mysqli_con = mysqli_connect($localhost,$usuario,$senha,$banco);
 
 
-function recebeInformacoesUsuario($mysqli,$user,$passwordUser){
-        $arrayInfo = [];
-    // logica do recebimento 
-    $sql = "SELECT $user,$passwordUser FROM usuarios";
-    if($result = mysqli_query($mysqli,$sql)){
-       $arrayInfo =  mysqli_fetch_array($result) ;
+function recebe($mysqli,$sql){
+
+    $result = mysqli_query($mysqli,$sql);
+    if($result ){
+            $array = mysqli_fetch_array($result);
+            return $array;
     }
-    //passando informações para um array
-    return $arrayInfo;
+    else{
+        return 0;
+    }
+
 }
+function inserir($mysqli,$tabelaEColunas,$info){
+
+    $sql = "INSERT INTO " . $tabelaEColunas . "VALUES(" . $info .")";
+
+    mysqli_query($mysqli,$sql);
+}
+
 
 
 ?>
