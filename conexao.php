@@ -21,11 +21,17 @@ function recebe($mysqli,$sql){
     }
 
 }
-function inserir($mysqli,$tabelaEColunas,$info){
+function inserir($mysqli,$tabela,$valoresTabela,$info){
 
-    $sql = "INSERT INTO " . $tabelaEColunas . "VALUES(" . $info .")";
+    $sql = "INSERT INTO " . $tabela ."(".$valoresTabela.")" . "VALUES(" . $info .")";
 
-    mysqli_query($mysqli,$sql);
+    $result = mysqli_query($mysqli,$sql);
+    if($result){
+        return 1;
+    }else{
+        return 0;
+    }
+    return $sql;
 }
 
 

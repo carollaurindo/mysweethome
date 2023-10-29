@@ -1,17 +1,9 @@
 <?php 
-if($_GET['status'] == 1){
-  echo "
-  <script type="text/javascript" defer>
-      alert("Categoria criada com sucesso");
-    </script>
-  ";
-}else{
 
-  echo "
-  <script type="text/javascript" defer>
-      alert("Categoria não criada com sucesso");
-    </script>
-  ";
+if(isset($_GET['status'])){
+  if($_GET['status'] == 1){
+   
+  }
 }
 ?>
 
@@ -21,7 +13,7 @@ if($_GET['status'] == 1){
 </head>
 <body>
 
-<form action="categoria_cad.php" method="POST">
+<form action="verify/categoria_verify.php" method="POST">
   <input type="text" length="20" name="categoria" placeholder="Digite o nome da categoria">
   <button type="submit">Cadastrar</button>
   

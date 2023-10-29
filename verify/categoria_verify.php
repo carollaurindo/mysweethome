@@ -3,7 +3,7 @@
 $categoria = $_POST['categoria'];
 $status = 0;
 
-  $result = inserir($mysqli_con,"categorias","VALUES($categoria");
+  $result = inserir($mysqli_con,"categorias","nome_categoria","'$categoria'");
   
   if($result == true){
     echo "sucesso";
