@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+$nome = $_SESSION['nome_usuario'];
 ?>
 
         <!DOCTYPE html>
@@ -46,9 +48,9 @@ session_start();
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
-          <li><a class="nav-link scrollto" href="categoria.php">Categorias</a></li>
-          <li><a class="nav-link scrollto" href="lista.php">Listas</a></li>
+          <li><a class="nav-link scrollto active" href="perfil.php">Home</a></li>
+          <li><a class="nav-link scrollto" href="categoria.php" name="categoria">Categorias</a></li>
+          <li><a class="nav-link scrollto" href="lista.php" name="listas">Listas</a></li>
           
           
           
@@ -79,12 +81,64 @@ session_start();
   </header><!-- final Header -->
 
   <!-- ======= Hero imagem do fundo ======= -->
-  <section id="hero">
+  
+ <!-- ======= Hero imagem do fundo ======= -->
+ <section id="hero">
     <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
+      <h1>Bem vindo,<?php echo "$nome";?></h1>
       
     </div>
   </section><!-- Fim do Hero-->
-<section>
-    
 
-</section>
+
+  <section >
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 menu-perfil">
+          <form>
+            
+          <input type="radio" name="mostrar" onclick="qual()" value="categoria">Categorias</input></br>
+          <input type="radio" name="mostrar" onclick="qual()" value="lista">Listas</input></br>
+          <input type="radio" name="mostrar" onclick="qual()" value="agenda">Agenda</input></br>
+          </form>
+        </div>
+        <div class="col-md-8 conteudo-perfil">
+          <iframe src="categoria.php" title="Categorias"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+ <!-- ======= Footer (rodapé)======= -->
+ <footer id="footer">
+    <div class="footer-top">
+     
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>My Sweet Home</strong>. Todos os Direitos Reservados
+      </div>
+      <div class="credits">
+        
+       </a>
+      </div>
+    </div>
+  </footer><!-- fim do rodapé -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/js/script.js"></script>
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -8,9 +8,10 @@ $email_db;
 $senha_db;
 $id_usuario;
 $nome_usuario;
-$result = recebe($mysqli_con,"SELECT * FROM usuarios WHERE email_usuario='$email' and senha_usuario='$senha'");
-if ($result != 0)
+$sql = recebe($mysqli_con,"SELECT * FROM usuarios WHERE email_usuario='$email' and senha_usuario='$senha'");
+if ($sql)
 {
+    $result = mysqli_fetch_array($sql);
     $email_db = $result['email_usuario'];
     $senha_db = $result['senha_usuario'];
     $id_usuario = $result['id_usuario'];

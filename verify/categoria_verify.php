@@ -1,4 +1,18 @@
 <?PHP
+
+session_start();
+if(isset($_SESSION['login'])){
+if(isset($_GET['status'])){
+  if($_GET['status'] == 1){
+    echo "
+    <script type='text/javascript' defer>
+        alert('Categoria criada com sucesso');
+      </script>
+    ";
+  }
+}
+}
+
   require_once("conexao.php");
 $categoria = $_POST['categoria'];
 $status = 0;

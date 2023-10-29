@@ -72,7 +72,7 @@
                   
                   echo '<li class="dropdown"><a href="login.php">Entrar</a></li>';
                   
-                  echo '<li class="dropdown"><a href="">Cadastrar</a></li>';
+                  echo '<li class="dropdown"><a href="cadastro.php">Cadastrar</a></li>';
                  
               ?>
             

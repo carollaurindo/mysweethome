@@ -1,9 +1,12 @@
-<?php
-if($_SESSION['login'] != true){
-    header("location:login.php");
+ <?php
+ session_start();
+ if(isset($_SESSION['login'])){
+ if($_SESSION['login'] == true){
+    header("location:perfil.php");
 
+ }
 }
-?>
+?> 
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -13,10 +16,11 @@ if($_SESSION['login'] != true){
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
-    <form action="verify/cadastro_verify.php" method="post">
-        <input  name="nome" type="text" placeholder="Nome de usuario">
-        <input name="email" type="email" placeholder="Email">
-        <input name="senha" type="password" placeholder="Senha">
+    <form action="verify/cadastro_verify.php" method="post" enctype="multipart/form-data">
+        <input  name="nome" type="text" placeholder="Nome de usuario"></br>
+        <input type="file" name="imagem" accept=".jpg,.jpeg,.png"> </br>
+        <input name="email" type="email" placeholder="Email"></br>
+        <input name="senha" type="password" placeholder="Senha"></br>
         <button type="submit">Enviar</button>
     </form> 
     </body>

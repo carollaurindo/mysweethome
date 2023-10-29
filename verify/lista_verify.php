@@ -1,5 +1,18 @@
 <?php
+
 session_start();
+if(isset($_SESSION['login'])){
+if(isset($_GET['status'])){
+  if($_GET['status'] == 1){
+    echo "
+    <script type='text/javascript' defer>
+        alert('Categoria criada com sucesso');
+      </script>
+    ";
+  }
+}
+}
+
 require_once("../conexao.php");
 $item = $_POST['item'];
 $idUsuario = $_SESSION['id_usuario'];

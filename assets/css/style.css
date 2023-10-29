@@ -380,7 +380,10 @@ h6 {
   background-size: cover;
   position: relative;
 }
-
+.perfil{
+  background-color:#5dbaf0;
+  color:#5a8cea;
+}
 @media (min-width: 1024px) {
   #hero {
     background-attachment: fixed;

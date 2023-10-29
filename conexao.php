@@ -12,9 +12,8 @@ $mysqli_con = mysqli_connect($localhost,$usuario,$senha,$banco);
 function recebe($mysqli,$sql){
 
     $result = mysqli_query($mysqli,$sql);
-    if($result ){
-            $array = mysqli_fetch_array($result);
-            return $array;
+    if($result){
+            return $result;
     }
     else{
         return 0;
@@ -31,9 +30,7 @@ function inserir($mysqli,$tabela,$valoresTabela,$info){
     }else{
         return 0;
     }
-    return $sql;
 }
-
 
 
 ?>
