@@ -23,34 +23,29 @@ require_once("../conexao.php");
     $id = $_SESSION['id_usuario'];
     $data = date("j, n, Y");      
     $hora = date("H:i:s");
+    $imagem = $_FILES['imagem'];
+    $pasta = "../imagens/";
+    
+    $caminho = $pastaImagem . $imagem['name'];
+    if(move_uploaded_file($imagem["tmp_name"],"../$pasta".$imagem['name'])){
+      $result=  inserir($mysqli_con,"guias","titulo_guia,id_categoria,id_colaborador,texto_guia,data_guia,hora_guia","
+          '$titulo',
+          '$categoria',
+          '$id',
+          '$conteudo',
+          '$data',
+          '$hora',
+          '$caminho'
+        ");
+    }
 
-    
-    // echo $titulo. "</br>";
-    
-    // echo $categoria. "</br>";
-    
-    // echo $id. "</br>";
 
-    // echo $conteudo. "</br>";
-    
-    // echo $data. "</br>";
-    
-    // echo $hora. "</br>";
-
-   $result=  inserir($mysqli_con,"guias","titulo_guia,id_categoria,id_colaborador,texto_guia,data_guia,hora_guia","
-        '$titulo',
-        '$categoria',
-        '$id',
-        '$conteudo',
-        '$data',
-        '$hora'
-    ");
-
+   
     if($result){
-        header("location:../guias.php?status=1");
+        header("location:../privado/guias.php?status=1");
     }
     else {
-      header("location:../guias.php?status=0");
+      header("location:../privado/guias.php?status=0");
       
     }
 

@@ -19,7 +19,7 @@ if(isset($_GET['status'])){
 <head>
 <title>Criando item da lista</title>
 </head>
-<form action="verify/lista_verify.php" method="post">
+<form action="../verify/lista_verify.php" method="post">
 <input type="hidden" name="usuario" value="<?php  $_SESSION['id_usuario']?>">
 <input type="text" name="item" placeholder="Nome do Item">
 <button type="submit" > Enviar Item</button>

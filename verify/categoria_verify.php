@@ -23,7 +23,7 @@ $status = 0;
     echo "sucesso";
     $status=1;
   }
-    header("location:categoria.php?status=1");
+    header("location:../privado/categoria.php?status=1");
   
   
 

@@ -13,7 +13,7 @@ if(isset($_GET['status'])){
 </head>
 <body>
 
-<form action="verify/categoria_verify.php" method="POST">
+<form action="../verify/categoria_verify.php" method="POST">
   <input type="text" length="20" name="categoria" placeholder="Digite o nome da categoria">
   <button type="submit">Cadastrar</button>
   

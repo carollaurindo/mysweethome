@@ -23,7 +23,7 @@ require_once('../conexao.php');
     if($result == true){
         $status=1;
       }
-        header("location:../anotacoes.php?status=1");
+        header("location:../privado/anotacoes.php?status=1");
       
       
 ?>

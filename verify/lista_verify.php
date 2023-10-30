@@ -23,7 +23,7 @@ echo $result;
 if($result){
   echo "criado com sucesso";
 }
-  header("location:../lista.php?status=0");
+  header("location:../privado/lista.php?status=0");
 
 
 ?>

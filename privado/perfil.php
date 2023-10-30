@@ -16,21 +16,21 @@ $nome = $_SESSION['nome_usuario'];
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/logo2.png" rel="icon">
+  <link href="../assets/img/logo2.png" rel="icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- CSS-->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet">
 
  
 </head>
@@ -42,7 +42,7 @@ $nome = $_SESSION['nome_usuario'];
     <div class="container d-flex justify-content-between align-items-center">
 
       <div id="logo">
-        <a href="index.html"><img width="" height="" src="assets/img/logosemfundo.png" alt=""></a>
+        <a href="../index.php"><img width="" height="" src="../assets/img/logosemfundo.png" alt=""></a>
         
       </div>
 
@@ -69,7 +69,7 @@ $nome = $_SESSION['nome_usuario'];
                  
                   <li class="dropdown"><a href="#">Ver perfil</a></li>
                   
-                  <li class="dropdown"><a href="sair.php">Sair</a></li>
+                  <li class="dropdown"><a href="../sair.php">Sair</a></li>
                   
               
             </ul>
@@ -95,15 +95,12 @@ $nome = $_SESSION['nome_usuario'];
     <div class="container">
       <div class="row">
         <div class="col-md-4 menu-perfil">
-          <form>
-            
-          <input type="radio" name="mostrar" onclick="qual()" value="categoria">Categorias</input></br>
-          <input type="radio" name="mostrar" onclick="qual()" value="lista">Listas</input></br>
-          <input type="radio" name="mostrar" onclick="qual()" value="agenda">Agenda</input></br>
-          </form>
+         
+          
         </div>
         <div class="col-md-8 conteudo-perfil">
-          <iframe src="categoria.php" title="Categorias"></iframe>
+
+
         </div>
       </div>
     </div>

@@ -26,12 +26,12 @@ if($email == $email_db){
         $_SESSION["id_usuario"] = $id_usuario;
         $_SESSION["nome_usuario"] = $nome_usuario;
 
-        header('location:../perfil.php');
+        header('location:../privado/perfil.php');
     }else{
         header('location:../login.php');
     }
 }else{
-    header("location:../login.php");
+    header("location:../privado/login.php");
 }
 
 
