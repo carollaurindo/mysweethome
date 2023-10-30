@@ -10,9 +10,9 @@ require_once("conexao.php");
       $todo = mysqli_fetch_assoc($recebe);
     }
     }else {
-      header("location:index.php");
+      header("location:posts.php");
     }
-  
+
 ?>
 
 <!DOCTYPE html>
@@ -61,8 +61,6 @@ require_once("conexao.php");
         <ul>
           <li><a class="nav-link scrollto " href="index.php">Home</a></li>
           <li><a class="nav-link scrollto" href="index.php#sobre">Sobre</a></li>
-          <li><a class="nav-link scrollto" href="">Serviços</a></li>
-          <li><a class="nav-link scrollto " href="">Parcerias</a></li>
           <li><a class="nav-link scrollto" href="index.php#time">Conheça Nosso Time</a></li>
           
           <li><a class="nav-link scrollto" href="contato.php">Contato</a></li>

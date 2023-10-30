@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 require_once("conexao.php");
 ?>
 <!DOCTYPE html>
@@ -29,7 +28,7 @@ require_once("conexao.php");
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- CSS-->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/style2.css" rel="stylesheet">
 
  
 </head>
@@ -47,11 +46,9 @@ require_once("conexao.php");
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
-          <li><a class="nav-link scrollto" href="#sobre">Sobre</a></li>
-          <li><a class="nav-link scrollto" href="#serviços">Serviços</a></li>
-          <li><a class="nav-link scrollto " href="#parcerias">Parcerias</a></li>
-          <li><a class="nav-link scrollto" href="#time">Conheça Nosso Time</a></li>
+          <li><a class="nav-link scrollto " href="index.php">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.php#sobre">Sobre</a></li>
+          <li><a class="nav-link scrollto" href="index.php#time">Conheça Nosso Time</a></li>
           
           <li><a class="nav-link scrollto" href="contato.php">Contato</a></li>
           <li class="dropdown"><a href="#"><span>Menu</span> <i class="bi bi-chevron-down"></i></a>
@@ -93,43 +90,23 @@ require_once("conexao.php");
   <!-- ======= Hero imagem do fundo ======= -->
   <section id="hero">
     <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
-      <h1>Bem vindo ao My Sweet Home</h1>
+      <h1>Todas as nossas Postagens</h1>
       
     </div>
   </section><!-- Fim do Hero-->
 
   <main id="main">
-    <section id="fundo_compartilhado" >
+   
     <!-- ======= Sobre======= -->
     
-    <section id="sobre" class="back-to-white">
-      <div class="container" data-aos="fade-up">
-        <div class="row sobre-container">
-
-          <div class="col-lg-10 content order-lg-1 order-2">
-            <h2 class="title">Um pouco sobre nós</h2>
-            <p>
-              Trocar pelo texto da documentação
-
-            </p>
-
-          </div>
-
-          <div class="col-lg-2 background order-lg-2 order-1" data-aos="fade-left" data-aos-delay="100">
-            <img src="assets/img/logoMSH.png">
-          </div>
-        </div>
-
-      </div>
-    </section><!-- FIM SOBRE NÓS-->
 
 
    
     
     <!-- ======= Portfolio Section ======= -->
-<section id="portfolio" class="portfolio">
+    <section id="portfolio" class="portfolio">
       
-    <div class="container" data-aos="fade-up">
+      <div class="container" data-aos="fade-up">
         <div class="section-header">
           <h3 class="section-title">Vem nas dicas</h3>
           <p class="section-description"> </p>
@@ -138,26 +115,26 @@ require_once("conexao.php");
         <div class="row" data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
-              <button type="button" class="btn btn-primary"><a href="guias.php" >COZINHA</a></button>
-              <button type="button" class="btn btn-primary"><a href="guias.php" >LIMPEZA</a></button>
-              <button type="button" class="btn btn-primary"><a href="guias.php" >LIFE HACK</a></button>
-              <button type="button" class="btn btn-primary"><a href="guias.php" >WEB</a></button>
+              <button type="button" class="btn btn-primary"><a href="guias.php?cat=cozinha" >COZINHA</a></button>
+              <button type="button" class="btn btn-primary"><a href="guias.php?cat=limpeza" >LIMPEZA</a></button>
+              <button type="button" class="btn btn-primary"><a href="guias.php?cat=hacks" >LIFE HACK</a></button>
+              <button type="button" class="btn btn-primary"><a href="guias.php?cat=web" >WEB</a></button>
             </ul>
           </div>
         </div>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-        <?php
+
+          
+          <?php
                 $sql = "SELECT * FROM guias";
                 $result = recebe($mysqli_con,$sql);  
                 if($result ){
-                    $num_rows = mysqli_num_rows($result);
-
                     while($dado = mysqli_fetch_array($result)){
 
 
 
-                       echo $num_rows;
+                    
                        echo " <div class='col-lg-4 col-md-6 portfolio-item filter-app'>"."</br>";
                        echo " <img src='".$dado['imagem']."' class='img-fluid' alt='    '>"."</br>";
                        echo " <div class='portfolio-info'>"."</br>";
@@ -171,90 +148,13 @@ require_once("conexao.php");
                     }
                 }
                 ?>
-                     
-                
-              
-            </div>
-          
 
-    </div>
-
-      
-   
-      
-    </div>
-    </section><!-- fim do portifolio -->
-  </section>
-    <!-- ======= Time======= -->
-    <section id="time">
-      <div class="container aos-init aos-animate" data-aos="fade-up">
-        <div class="section-header">
-          <h3 class="section-title">Time</h3>
-        </div>
-        <div class="row">
-          <div class="col-lg col-md">
-            <div class="membro aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-              <div class="pic"><img src="assets/img/WhatsApp Image 2023-10-02 at 19.14.28.jpeg" alt=""></div>
-              <h4>Beatriz Santos</h4>
-              <span>Programadora</span>
-              <div class="social">
-                <a href="https://www.facebook.com/profile.php?id=100028712160068&mibextid=2JQ9oc"target="_blank"><i class="bi bi-facebook"></i></a>
-                <a href="https://www.linkedin.com/home" target="_blank"><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg col-md">
-            <div class="membro" data-aos="fade-up" data-aos-delay="200">
-              <div class="pic"><img src="assets/img/carol a.jpeg" alt=""></div>
-              <h4>Carolina Coelho</h4>
-              <span>Programadora</span>
-              <div class="social">
-                <a href="https://instagram.com/carolgcoelho"target="_blank"><i class="bi bi-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/carolina-coelho-657798b3" target="_blank"><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg col-md">
-            <div class="membro" data-aos="fade-up" data-aos-delay="300">
-              <div class="pic"><img src="assets/img/carol e.jpeg" alt=""></div>
-              <h4>Caroline Laurindo</h4>
-              <span>Programadora</span>
-              <div class="social">
-                <a href="https://instagram.com/ca.laurindo?igshid=NzZlODBkYWE4Ng=="target="_blank"><i class="bi bi-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/caroline-laurindo-41bb01161/" target="_blank"><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg col-md">
-            <div class="membro" data-aos="fade-up" data-aos-delay="400">
-              <div class="pic"><img src="assets/img/team-1.jpg" alt=""></div>
-              <h4>Christian Miranda</h4>
-              <span>Programador</span>
-              <div class="social">
-                <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
-                <a href="https://www.linkedin.com/home" target="_blank"><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg col-md">
-            <div class="membro" data-aos="fade-up" data-aos-delay="500">
-              <div class="pic"><img src="assets/img/WhatsApp Image 2023-10-01 at 12.03.05.jpeg" alt=""></div>
-              <h4>Eduardo Hernandes </h4>
-              <span>Programador</span>
-              <div class="social">
-               
-                <a href="https://instagram.com/edua.hernandes?igshid=NzZlODBkYWE4Ng==" target="_blank"><i class="bi bi-instagram"></i></a>
-                <a href="https://www.linkedin.com/me?trk=p_mwlite_me_notifications-secondary_nav==" target="_blank"><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
         </div>
 
       </div>
-    </section><!-- fim time -->
+   
+      
+    
 
     <!-- ======= Contato ======= -->
     

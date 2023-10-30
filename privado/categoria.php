@@ -1,5 +1,5 @@
 <?php 
-
+require_once("../conexao.php");
 if(isset($_GET['status'])){
   if($_GET['status'] == 1){
    
@@ -18,5 +18,12 @@ if(isset($_GET['status'])){
   <button type="submit">Cadastrar</button>
   
 </form>
+
+<div class="Mostrar">
+  <?php
+  recebe($mysqli_con,"SELECT * FROM categorias");
+  ?>
+
+</div>
 </body>
 </html>
