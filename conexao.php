@@ -1,3 +1,4 @@
+
 <?php
 
 $banco = "testetcc";
@@ -31,6 +32,7 @@ function inserir($mysqli,$tabela,$valoresTabela,$info){
         return 0;
     }
 }
+
 
 
 ?>
