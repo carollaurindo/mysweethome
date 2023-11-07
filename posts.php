@@ -1,3 +1,7 @@
+<?php
+session_start();
+require_once("conexao.php");
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -24,7 +28,7 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- CSS-->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/style2.css" rel="stylesheet">
 
  
 </head>
@@ -42,11 +46,9 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
-          <li><a class="nav-link scrollto" href="#sobre">Sobre</a></li>
-          <li><a class="nav-link scrollto" href="#serviços">Serviços</a></li>
-          <li><a class="nav-link scrollto " href="#parcerias">Parcerias</a></li>
-          <li><a class="nav-link scrollto" href="#time">Conheça Nosso Time</a></li>
+          <li><a class="nav-link scrollto " href="index.php">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.php#sobre">Sobre</a></li>
+          <li><a class="nav-link scrollto" href="index.php#time">Conheça Nosso Time</a></li>
           
           <li><a class="nav-link scrollto" href="contato.php">Contato</a></li>
           <li class="dropdown"><a href="#"><span>Menu</span> <i class="bi bi-chevron-down"></i></a>
@@ -60,22 +62,23 @@
           </li>
           <li class="dropdown"><a href="#">Login<i class="bi bi-chevron-down"></i></a>
             <ul>
-              
-             <?php   
-             
-            if(isset($_SESSION['login'])){
-                echo "<li class='dropdown'><a href=''>Ver perfil</a></li>";
+              <?php
+                
+                  if(isset($_SESSION['login'])){
+                    if($_SESSION['login'] == true){ 
+                      echo "<li class='dropdown'><a href='privado/perfil.php'>Ver perfil</a></li>";
+                      
+                      echo "<li class='dropdown'><a href=''>Sair</a></li>";
                   
-                echo ' <li class="dropdown"><a href="">Sair</a></li>';
-              }
-               
+                    }
+                   
+                  }  else{
+                    echo "<li class='dropdown'><a href='login.php'>Entrar</a></li>";
+                    
+                    echo "<li class='dropdown'><a href='cadastro.php'>Cadastrar</a></li>";
+                    }
                   
-                  echo '<li class="dropdown"><a href="login.php">Entrar</a></li>';
-                  
-                  echo '<li class="dropdown"><a href="cadastro.php">Cadastrar</a></li>';
-                 
               ?>
-            
             </ul>
           </li>
         </ul>
@@ -87,18 +90,74 @@
   <!-- ======= Hero imagem do fundo ======= -->
   <section id="hero">
     <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
-      <div class="formulario">
-        <form class=".form-control .form-control-lg formulario" action="verify/login_verify.php" method="POST">
-        <label>Email</label>      </br>
-        <input class=".form-control" type="email" name="email"></br>
-        <label>Senha</label></br>
-        <input type="password" name="senha"></br></br>   
-        <button type="submit" class="btn btn-secondary submit">Entrar</button>
-      </form>
-      </div>
+      <h1>Todas as nossas Postagens</h1>
+      
     </div>
   </section><!-- Fim do Hero-->
 
+  <main id="main">
+   
+    <!-- ======= Sobre======= -->
+    
+
+
+   
+    
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h3 class="section-title">Vem nas dicas</h3>
+          <p class="section-description"> </p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <button type="button" class="btn btn-primary"><a href="guias.php?cat=cozinha" >COZINHA</a></button>
+              <button type="button" class="btn btn-primary"><a href="guias.php?cat=limpeza" >LIMPEZA</a></button>
+              <button type="button" class="btn btn-primary"><a href="guias.php?cat=hacks" >LIFE HACK</a></button>
+              <button type="button" class="btn btn-primary"><a href="guias.php?cat=web" >WEB</a></button>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+          
+          <?php
+                $sql = "SELECT * FROM guias";
+                $result = recebe($mysqli_con,$sql);  
+                if($result ){
+                    while($dado = mysqli_fetch_array($result)){
+
+
+
+                    
+                       echo " <div class='col-lg-4 col-md-6 portfolio-item filter-app'>"."</br>";
+                       echo " <img src='".$dado['imagem']."' class='img-fluid' alt='    '>"."</br>";
+                       echo " <div class='portfolio-info'>"."</br>";
+                       echo  " <h4>".$dado['titulo_guia']."</h4>"."</br>";
+                       echo  "<p>".$dado['id_categoria']."</p>"."</br>";
+                       echo  "<a href='' data-gallery='portfolioGallery' class='portfolio-lightbox preview-link' title='App 1'><i class='bx bx-plus'></i></a>"."</br>";
+                       echo  "<a href='guias.php?id=".$dado['id_guia']."' class='details-link' title='More Details'><i class='bx bx-link'></i></a>"."</br>";
+                       echo "</div></div>";
+                      
+
+                    }
+                }
+                ?>
+
+        </div>
+
+      </div>
+   
+      
+    
+
+    <!-- ======= Contato ======= -->
+    
 
   </main>
 

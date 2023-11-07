@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+<?php
+session_start();
+
+$nome = $_SESSION['nome_usuario'];
+?>
+
+        <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -10,21 +16,21 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/logo2.png" rel="icon">
+  <link href="../assets/img/logo2.png" rel="icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- CSS-->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet">
 
  
 </head>
@@ -36,19 +42,18 @@
     <div class="container d-flex justify-content-between align-items-center">
 
       <div id="logo">
-        <a href="index.html"><img width="" height="" src="assets/img/logosemfundo.png" alt=""></a>
+        <a href="../index.php"><img width="" height="" src="../assets/img/logosemfundo.png" alt=""></a>
         
       </div>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
-          <li><a class="nav-link scrollto" href="#sobre">Sobre</a></li>
-          <li><a class="nav-link scrollto" href="#serviços">Serviços</a></li>
-          <li><a class="nav-link scrollto " href="#parcerias">Parcerias</a></li>
-          <li><a class="nav-link scrollto" href="#time">Conheça Nosso Time</a></li>
+          <li><a class="nav-link scrollto active" href="perfil.php">Home</a></li>
+          <li><a class="nav-link scrollto" href="categoria.php" name="categoria">Categorias</a></li>
+          <li><a class="nav-link scrollto" href="lista.php" name="listas">Listas</a></li>
           
-          <li><a class="nav-link scrollto" href="contato.php">Contato</a></li>
+          
+          
           <li class="dropdown"><a href="#"><span>Menu</span> <i class="bi bi-chevron-down"></i></a>
             
             <ul>
@@ -60,22 +65,13 @@
           </li>
           <li class="dropdown"><a href="#">Login<i class="bi bi-chevron-down"></i></a>
             <ul>
-              
-             <?php   
              
-            if(isset($_SESSION['login'])){
-                echo "<li class='dropdown'><a href=''>Ver perfil</a></li>";
-                  
-                echo ' <li class="dropdown"><a href="">Sair</a></li>';
-              }
-               
-                  
-                  echo '<li class="dropdown"><a href="login.php">Entrar</a></li>';
-                  
-                  echo '<li class="dropdown"><a href="cadastro.php">Cadastrar</a></li>';
                  
-              ?>
-            
+                  <li class="dropdown"><a href="#">Ver perfil</a></li>
+                  
+                  <li class="dropdown"><a href="../sair.php">Sair</a></li>
+                  
+              
             </ul>
           </li>
         </ul>
@@ -85,29 +81,34 @@
   </header><!-- final Header -->
 
   <!-- ======= Hero imagem do fundo ======= -->
-  <section id="hero">
+  
+ <!-- ======= Hero imagem do fundo ======= -->
+ <section id="hero">
     <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
-      <div class="formulario">
-        <form class=".form-control .form-control-lg formulario" action="verify/login_verify.php" method="POST">
-        <label>Email</label>      </br>
-        <input class=".form-control" type="email" name="email"></br>
-        <label>Senha</label></br>
-        <input type="password" name="senha"></br></br>   
-        <button type="submit" class="btn btn-secondary submit">Entrar</button>
-      </form>
-      </div>
+      <h1>Bem vindo,<?php echo "$nome";?></h1>
+      
     </div>
   </section><!-- Fim do Hero-->
 
 
-  </main>
+  <section >
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 menu-perfil">
+         
+          
+        </div>
+        <div class="col-md-8 conteudo-perfil">
 
-  <!-- ======= Footer (rodapé)======= -->
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
 
+        </div>
       </div>
+    </div>
+  </section>
+ <!-- ======= Footer (rodapé)======= -->
+ <footer id="footer">
+    <div class="footer-top">
+     
     </div>
 
     <div class="container">
@@ -131,7 +132,7 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
-
+  <script src="assets/js/script.js"></script>
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
