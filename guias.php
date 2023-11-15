@@ -1,18 +1,5 @@
 <?php 
-require_once("conexao.php");
-    if(isset($_GET['id'])){
-    $documento = $_GET['id'];
-
-    $sql = "SELECT * FROM guias WHERE id_guia='$documento'";
-    $recebe = recebe($mysqli_con,$sql);
-    $todo;
-    if($recebe){
-      $todo = mysqli_fetch_assoc($recebe);
-    }
-    }else {
-      header("location:posts.php");
-    }
-
+    
 ?>
 
 <!DOCTYPE html>
@@ -61,9 +48,11 @@ require_once("conexao.php");
         <ul>
           <li><a class="nav-link scrollto " href="index.php">Home</a></li>
           <li><a class="nav-link scrollto" href="index.php#sobre">Sobre</a></li>
+          <li><a class="nav-link scrollto" href="">Serviços</a></li>
+          <li><a class="nav-link scrollto " href="#parcerias">Parcerias</a></li>
           <li><a class="nav-link scrollto" href="index.php#time">Conheça Nosso Time</a></li>
           
-          <li><a class="nav-link scrollto" href="contato.php">Contato</a></li>
+          <li><a class="nav-link scrollto active" href="contato.php">Contato</a></li>
           <li class="dropdown"><a href="#"><span>Menu</span> <i class="bi bi-chevron-down"></i></a>
             
             <ul>
@@ -82,7 +71,7 @@ require_once("conexao.php");
   <!-- ======= Hero imagem do fundo ======= -->
   <section id="fundo">
     <div class="fundo-container" data-aos="zoom-in" data-aos-delay="100">
-       
+       <?php 
 
             <!-- ======= Portfolio Details Section ======= -->
    <section id="portfolio-details" class="portfolio-details">
@@ -95,9 +84,9 @@ require_once("conexao.php");
             <div class="swiper-wrapper align-items-center">
 
               <div class="swiper-slide">
-                <img src="<?php echo $todo['imagem']?>" alt="Imagem vinda do banco de dados">
+                <img src="assets/img/portfolio/arroz.webp" alt="">
               </div>
-              <!--
+
               <div class="swiper-slide">
                 <img src="assets/img/portfolio/arroz2.jpg" alt="">
               </div>
@@ -105,7 +94,7 @@ require_once("conexao.php");
               <div class="swiper-slide">
                 <img src="assets/img/portfolio/portfolio-details-3.jpg" alt="">
               </div>
-                -->
+
             </div>
             <div class="swiper-pagination"></div>
           </div>
@@ -113,19 +102,15 @@ require_once("conexao.php");
 
         <div class="col-lg-4">
           <div class="portfolio-info">
-            <h1><?php echo $todo['titulo_guia'];?></h1>
+            <h1>Arroz Soltinho</h1>
             <ul>
+              <li><strong>Ingredientes(10 Porções)</strong>:</li>
               <li><strong>Modo de preparo</strong></a></li>
-              <li>
-                <?php
-                  echo $todo['texto_guia'];
-                ?>
-              </li>
             </ul>
           </div>
-          <!--<div class="portfolio-description">
+          <div class="portfolio-description">
             <h3>Fazendo arroz</h3>
-          </div>-->
+          </div>
         </div>
 
       </div>
@@ -141,6 +126,9 @@ require_once("conexao.php");
 
 
 
+<section id="contact">
+      
+    </section><!-- fim sessão de contato -->
 
 
     

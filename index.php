@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -39,48 +36,37 @@ session_start();
     <div class="container d-flex justify-content-between align-items-center">
 
       <div id="logo">
-        <a href="index.html"><img width="" height="" src="assets/img/logosemfundo.png" alt=""></a>
+        <a href="index.php"><img width="" height="" src="assets/img/logosemfundo.png" alt=""></a>
         
       </div>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
-          <li><a class="nav-link scrollto" href="#sobre">Sobre</a></li>
-          <li><a class="nav-link scrollto" href="#serviços">Serviços</a></li>
-          <li><a class="nav-link scrollto " href="#parcerias">Parcerias</a></li>
-          <li><a class="nav-link scrollto" href="#time">Conheça Nosso Time</a></li>
-          
+        <li><a class="nav-link scrollto " href="index.php">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.php#sobre">Sobre</a></li>
+          <li><a class="nav-link scrollto" href="index.php#portfolio">Dicas</a></li>
+          <li><a class="nav-link scrollto " href="#promoções">Promoções</a></li>
+          <li><a class="nav-link scrollto" href="index.php#time">Conheça Nosso Time</a></li>
           <li><a class="nav-link scrollto" href="contato.php">Contato</a></li>
-          <li class="dropdown"><a href="#"><span>Menu</span> <i class="bi bi-chevron-down"></i></a>
+          <li><a class="nav-link scrollto " href="login.php">Login</a></li>
+          
+            <ul>
+
+                  
+                  <!--
+                  <li class="dropdown"><a href="#"><span>Menu</span> <i class="bi bi-chevron-down"></i></a>
             
-            <ul>
-                  <li><a href="#">Agenda</a></li>
-                  <li><a href="#">Calculadora</a></li>
-                  <li><a href="#">Favoritos</a></li>
-                  
-            </ul>
-          </li>
-          <li class="dropdown"><a href="#">Login<i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <?php
-                
-                  if(isset($_SESSION['login'])){
-                    if($_SESSION['login'] == true){ 
-                      echo "<li class='dropdown'><a href='privado/perfil.php'>Ver perfil</a></li>";
-                      
-                      echo "<li class='dropdown'><a href=''>Sair</a></li>";
-                  
-                    }
-                   
-                  }  else{
-                    echo "<li class='dropdown'><a href='login.php'>Entrar</a></li>";
+                    <ul>
                     
-                    echo "<li class='dropdown'><a href='cadastro.php'>Cadastrar</a></li>";
-                    }
-                  
-              ?>
-            </ul>
+                      
+                          <li><a href="#">Agenda</a></li>
+                          <li><a href="#">Calculadora</a></li>
+                          <li><a href="#">Favoritos</a></li>
+                          
+                    </ul>
+                  <li class="dropdown"><a href="">Sair</a></li>
+                  <li class="dropdown"><a href="login.html">Entrar</a></li>        
+            </ul> -->
           </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -127,7 +113,7 @@ session_start();
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio">
       
-      <div class="container" data-aos="fade-up">
+              <div class="container" data-aos="fade-up">
         <div class="section-header">
           <h3 class="section-title">Vem nas dicas</h3>
           <p class="section-description"> </p>
@@ -149,10 +135,9 @@ session_start();
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>App 1</h4>
-              <p>App</p>
-              <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+             <a href="portfolio-details.html"> <h4>Dicas de cozinha</h4></a>
+              <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"></a>
+              
             </div>
           </div>
 

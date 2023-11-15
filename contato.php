@@ -47,17 +47,10 @@
           <li><a class="nav-link scrollto" href="">Serviços</a></li>
           <li><a class="nav-link scrollto " href="#parcerias">Parcerias</a></li>
           <li><a class="nav-link scrollto" href="index.php#time">Conheça Nosso Time</a></li>
-          
           <li><a class="nav-link scrollto active" href="contato.php">Contato</a></li>
-          <li class="dropdown"><a href="#"><span>Menu</span> <i class="bi bi-chevron-down"></i></a>
-            
-            <ul>
-                  <li><a href="#">Agenda</a></li>
-                  <li><a href="#">Calculadora</a></li>
-                  <li><a href="#">Favoritos</a></li>
-                  
-            </ul>
-          </li>
+          <li><a class="nav-link scrollto " href="login.php">Login</a></li>
+          
+
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->

@@ -36,47 +36,34 @@
     <div class="container d-flex justify-content-between align-items-center">
 
       <div id="logo">
-        <a href="index.html"><img width="" height="" src="assets/img/logosemfundo.png" alt=""></a>
+        <a href="index.php"><img width="" height="" src="assets/img/logosemfundo.png" alt=""></a>
         
       </div>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
-          <li><a class="nav-link scrollto" href="#sobre">Sobre</a></li>
-          <li><a class="nav-link scrollto" href="#serviços">Serviços</a></li>
+        <li><a class="nav-link scrollto " href="index.php">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.php#sobre">Sobre</a></li>
+          <li><a class="nav-link scrollto" href="">Serviços</a></li>
           <li><a class="nav-link scrollto " href="#parcerias">Parcerias</a></li>
-          <li><a class="nav-link scrollto" href="#time">Conheça Nosso Time</a></li>
-          
+          <li><a class="nav-link scrollto" href="index.php#time">Conheça Nosso Time</a></li>
           <li><a class="nav-link scrollto" href="contato.php">Contato</a></li>
-          <li class="dropdown"><a href="#"><span>Menu</span> <i class="bi bi-chevron-down"></i></a>
-            
-            <ul>
-                  <li><a href="#">Agenda</a></li>
-                  <li><a href="#">Calculadora</a></li>
-                  <li><a href="#">Favoritos</a></li>
-                  
-            </ul>
-          </li>
-          <li class="dropdown"><a href="#">Login<i class="bi bi-chevron-down"></i></a>
-            <ul>
-              
-             <?php   
-             
-            if(isset($_SESSION['login'])){
-                echo "<li class='dropdown'><a href=''>Ver perfil</a></li>";
-                  
-                echo ' <li class="dropdown"><a href="">Sair</a></li>';
-              }
-               
-                  
-                  echo '<li class="dropdown"><a href="login.php">Entrar</a></li>';
-                  
-                  echo '<li class="dropdown"><a href="cadastro.php">Cadastrar</a></li>';
+          <li><a class="nav-link scrollto " href="login.php">Login</a></li>
                  
-              ?>
+                  <!--
+                  <li class="dropdown"><a href="#"><span>Menu</span> <i class="bi bi-chevron-down"></i></a>
             
-            </ul>
+                    <ul>
+                    
+                      
+                          <li><a href="#">Agenda</a></li>
+                          <li><a href="#">Calculadora</a></li>
+                          <li><a href="#">Favoritos</a></li>
+                          
+                    </ul>
+                  <li class="dropdown"><a href="">Sair</a></li>
+                  <li class="dropdown"><a href="login.html">Entrar</a></li>        
+            </ul> -->
           </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -88,12 +75,13 @@
   <section id="hero">
     <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
       <div class="formulario">
-        <form class=".form-control .form-control-lg formulario" action="verify/login_verify.php" method="POST">
-        <label>Email</label>      </br>
-        <input class=".form-control" type="email" name="email"></br>
+        <form class=".form-control .form-control-lg formulario" action="login_verify.php" method="POST">
+        
+        <label>E-mail</label></br>      
+        <input class=".form-control" type="email" name="email"></br></br>
         <label>Senha</label></br>
-        <input type="password" name="senha"></br></br>   
-        <button type="submit" class="btn btn-secondary submit">Entrar</button>
+        <input type="password" name="senha"></br></br></br>
+        <button type="submit" class="btn btn-secondary submit">Entrar</button></br>  
       </form>
       </div>
     </div>
