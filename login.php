@@ -82,6 +82,10 @@
         <label>Senha</label></br>
         <input type="password" name="senha"></br></br></br>
         <button type="submit" class="btn btn-secondary submit">Entrar</button></br>  
+        </br></br>
+        <label>Sobrevivente novo? Faça seu cadastro!</label></br>   
+        </br>  
+        <button type="submit" class="btn btn-secondary submit">Cadastre-se</button></br>  
       </form>
       </div>
     </div>
