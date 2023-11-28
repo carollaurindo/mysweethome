@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>MSH</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo2.png" rel="icon">
+  <link href="assets/img/logosemfundo.png" rel="msh">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div id="logo">
+        <a href="index.html"><img width="" height="" src="assets/img/logosemfundo.png" alt=""></a>
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!--<h1><a href="index.html">MSH</a></h1>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#sobre">MSH</a></li>
+          <li><a class="nav-link scrollto" href="#serviços">Serviços</a></li>
+          <li><a class="nav-link scrollto " href="#parcerias">Parcerias</a></li>
+          <li><a class="nav-link scrollto" href="time">time</a></li>
+          <li class="dropdown"><a href="#"><span>Menu</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Submenu</span> <i class="bi bi-chevron-"></i></a>
+                <ul>
+                  <li><a href="#">Agenda</a></li>
+                  <li><a href="#">Calculadora</a></li>
+                  <li><a href="#">Favoritos</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="#contact">Contato</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+    </div>
+  </header><!-- final Header -->
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <!-- ======= Hero imagem do fundo ======= -->
+  <div tabindex="-1" class="profile-background-image profile-background-image--default">
+    <img width="200" height="200" src="" alt="" id="ember247" class="evi-image ember-view profile-photo-edit__preview">
+    <!-- Conteúdo da imagem de fundo do perfil -->
+    <!-- Conteúdo da foto de perfil -->
+    <div class="profile-photo-edit pv-top-card__edit-photo">
+      <!-- Nome do perfil -->
+      <h1 class="text-heading-xlarge inline t-24 v-align-middle break-words">Mario</h1>
+      </button>
+    </div>
+  </div>
+
+
+  <main id="main">
+
+    <!-- botoes perfil -->
+    <section id="portfolio" class="portfolio">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h3 class="section-title">Meus Atalhos</h3>
+          <p class="section-description">Este atalho foi desenvolvido com o propósito de auxiliar na simplificação de
+            sua rotina.</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li>
+                <button class="filter-button" data-filter=".filter-calculadora"
+                  onclick="filterItems('calculadora')">Calculadora</button>
+              </li>
+              <li>
+                <button class="filter-button" data-filter=".filter-notas" 
+                onclick="filterItems('notas')">Notas</button>
+              </li>
+              <li>
+                <button class="filter-button" data-filter=".filter-lista" 
+                onclick="filterItems('lista')">Listas</button>
+              </li>
+              <li>
+                <button class="filter-button" data-filter=".filter-agenda"
+                  onclick="filterItems('agenda')">Agenda</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="containercalculadora">
+          <div id="codigoContainerC">
+            <h1>Calculadora de Gastos</h1>
+
+            <div class="container">
+              <div class="form-group">
+                <label for="valor">Digite o valor:</label>
+                <input type="number" id="valor" min="0">
+              </div>
+              <button onclick="calcularDivisao()">Calcular</button>
+
+              <div class="result">
+                <h3>Resultados:</h3>
+                <p>Gastos fixos (50%): <span id="resultado1"></span></p>
+                <p>Gastos variáveis (30%): <span id="resultado2"></span></p>
+                <p>Reserva de emergência (20%): <span id="resultado3"></span></p>
+              </div>
+            </div>
+          </div>
+
+          <textarea id="blocoDeNotas" style="display: none;"></textarea>
+
+          <ul id="lista" style="display: none;"></ul>
+        </div>
+      </div>
+      <div>
+        <div class="col-sm">
+          <script src="calc.js"></script>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- botoes perfil -->
+
+
+
+
+    <!-- ======= Footer (rodapé)======= -->
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="container">
+
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong>My Sweet Home</strong>. Todos os Direitos Reservados
+        </div>
+        <div class="credits">
+
+          </a>
+        </div>
+      </div>
+    </footer><!-- fim do rodapé -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
